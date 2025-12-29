@@ -33,16 +33,22 @@ class Program
         //p1.Display();
 
         // Problem 4
-        HotelBooking hb = new HotelBooking();
-        hb.Display();
+        //HotelBooking hb = new HotelBooking();
+        //hb.Display();
 
-        Console.WriteLine();
-        HotelBooking hb1 = new HotelBooking("Eleven", "Double", 6);
-        hb1.Display();
+        //Console.WriteLine();
+        //HotelBooking hb1 = new HotelBooking("Eleven", "Double", 6);
+        //hb1.Display();
 
-        Console.WriteLine();
-        HotelBooking hb2 = new HotelBooking(hb1);
-        hb2.Display();
+        //Console.WriteLine();
+        //HotelBooking hb2 = new HotelBooking(hb1);
+        //hb2.Display();
+
+
+
+        // Problem 4
+        LibraryBook b = new LibraryBook("Rich Dad Poor Dad", "Robert Kiyoswaki", 400, true);
+        b.Display();
 
 
 
