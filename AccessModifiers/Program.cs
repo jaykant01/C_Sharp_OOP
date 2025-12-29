@@ -28,16 +28,27 @@ class Program
 
 
         // Problem 3
-        BankAccount b = new BankAccount();
+        //BankAccount b = new BankAccount();
         //b.SetBalance(1000);
-        b.Display();
+        //b.Display();
+
+        //Console.WriteLine();
+
+        //SavingsAccount s = new SavingsAccount();
+        //s.SetBalance(1800);
+        //s.Display();
+
+
+        // Problem 4
+        EmployeeRecords emp = new EmployeeRecords();
+        emp.SetSalary(80000);
+        emp.Display();
 
         Console.WriteLine();
 
-        SavingsAccount s = new SavingsAccount();
-        //s.SetBalance(1800);
-        s.Display();
-
+        Manager mg = new Manager();
+        mg.SetSalary(60000);
+        mg.Display();
 
 
         Console.ReadKey();
