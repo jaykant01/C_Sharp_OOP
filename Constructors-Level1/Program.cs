@@ -26,11 +26,26 @@ class Program
 
 
         // Problem 3
-        PersonClass p = new PersonClass("Steve", 26, "Actor");
-        p.Display();
+        //PersonClass p = new PersonClass("Steve", 26, "Actor");
+        //p.Display();
+        //Console.WriteLine();
+        //PersonClass p1 = new PersonClass(p);
+        //p1.Display();
+
+        // Problem 4
+        HotelBooking hb = new HotelBooking();
+        hb.Display();
+
         Console.WriteLine();
-        PersonClass p1 = new PersonClass(p);
-        p1.Display();
+        HotelBooking hb1 = new HotelBooking("Eleven", "Double", 6);
+        hb1.Display();
+
+        Console.WriteLine();
+        HotelBooking hb2 = new HotelBooking(hb1);
+        hb2.Display();
+
+
+
 
 
 
