@@ -1,5 +1,8 @@
 ﻿namespace Constructors_Level1;
-
+/* Book Class
+o Create a Book class with attributes title, author, and price.
+o Provide both default and parameterized constructors.
+*/
 public class BookClass
 {
     // Attributes
