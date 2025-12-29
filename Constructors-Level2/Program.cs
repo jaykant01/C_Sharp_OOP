@@ -12,12 +12,19 @@ class Program
 
 
         // Problem 2
-        OnlineCourse o = new OnlineCourse("C#", 3, 0);
-        o.DisplayCourseDetails();
-        Console.WriteLine();
-        OnlineCourse.UpdateInstituteName("GLA");
-        o.DisplayCourseDetails();
+        //OnlineCourse o = new OnlineCourse("C#", 3, 0);
+        //o.DisplayCourseDetails();
+        //Console.WriteLine();
+        //OnlineCourse.UpdateInstituteName("GLA");
+        //o.DisplayCourseDetails();
 
+
+        // Problem 3
+        VehicleRegistration v = new VehicleRegistration("Will", "SUV");
+        v.DisplayVehicleDetails();
+        Console.WriteLine();
+        VehicleRegistration.UpdateRegistrationFee(2000);
+        v.DisplayVehicleDetails();
 
 
         Console.ReadKey();
