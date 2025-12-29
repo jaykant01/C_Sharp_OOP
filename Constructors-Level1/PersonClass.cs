@@ -1,5 +1,8 @@
 ﻿namespace Constructors_Level1;
-
+/* Person Class (Copy Constructor)
+o Create a Person class with a copy constructor that clones another person's
+attributes.
+ */
 public class PersonClass
 {
     // Attributes
