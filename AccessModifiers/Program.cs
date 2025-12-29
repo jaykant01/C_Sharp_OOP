@@ -17,13 +17,28 @@ class Program
 
 
         // Problem 2
-        BookLibrary bk = new BookLibrary(4242, "Stranger Things", "Brothers");
-        bk.SetAuthor("Duffer Brothers");
-        bk.Display();
+        //BookLibrary bk = new BookLibrary(4242, "Stranger Things", "Brothers");
+        //bk.SetAuthor("Duffer Brothers");
+        //bk.Display();
 
-        EBook eb = new EBook(4343, "ST Chapter 5", "Vecna");
+        //EBook eb = new EBook(4343, "ST Chapter 5", "Vecna");
         //eb.SetAuthor("Millie Bobbi Brown");
-        eb.Display();
+        //eb.Display();
+
+
+
+        // Problem 3
+        BankAccount b = new BankAccount();
+        //b.SetBalance(1000);
+        b.Display();
+
+        Console.WriteLine();
+
+        SavingsAccount s = new SavingsAccount();
+        //s.SetBalance(1800);
+        s.Display();
+
+
 
         Console.ReadKey();
         
