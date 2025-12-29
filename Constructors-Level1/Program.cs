@@ -16,6 +16,8 @@ class Program
         //bk1.Display();
 
 
+
+
         // Problem 2
         //CircleClass c = new CircleClass();
         //c.Display();
@@ -25,12 +27,17 @@ class Program
         //c1.Display();
 
 
+
+
         // Problem 3
         //PersonClass p = new PersonClass("Steve", 26, "Actor");
         //p.Display();
         //Console.WriteLine();
         //PersonClass p1 = new PersonClass(p);
         //p1.Display();
+
+
+
 
         // Problem 4
         //HotelBooking hb = new HotelBooking();
@@ -46,9 +53,18 @@ class Program
 
 
 
-        // Problem 4
-        LibraryBook b = new LibraryBook("Rich Dad Poor Dad", "Robert Kiyoswaki", 400, true);
-        b.Display();
+
+        // Problem 5
+        //LibraryBook b = new LibraryBook("Rich Dad Poor Dad", "Robert Kiyoswaki", 400, true);
+        //b.Display();
+
+
+
+
+
+        // Problem 6
+        CarRental c = new CarRental("Mike", "SUV", 2);
+        c.Display();
 
 
 
