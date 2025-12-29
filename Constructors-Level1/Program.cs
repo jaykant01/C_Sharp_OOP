@@ -17,12 +17,23 @@ class Program
 
 
         // Problem 2
-        CircleClass c = new CircleClass();
-        c.Display();
+        //CircleClass c = new CircleClass();
+        //c.Display();
 
-        CircleClass c1 = new CircleClass(8);
+        //CircleClass c1 = new CircleClass(8);
+        //Console.WriteLine();
+        //c1.Display();
+
+
+        // Problem 3
+        PersonClass p = new PersonClass("Steve", 26, "Actor");
+        p.Display();
         Console.WriteLine();
-        c1.Display();
+        PersonClass p1 = new PersonClass(p);
+        p1.Display();
+
+
+
         Console.ReadKey();
     }
 }
