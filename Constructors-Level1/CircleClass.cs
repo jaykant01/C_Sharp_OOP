@@ -1,5 +1,9 @@
 ﻿namespace Constructors_Level1;
-
+/* Circle Class
+o Write a Circle class with a radius attribute.
+o Use constructor chaining to initialize radius with both default and
+user-provided values.
+ */
 public class CircleClass
 {
     // Attributes
