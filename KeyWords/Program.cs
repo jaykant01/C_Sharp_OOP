@@ -34,12 +34,17 @@ class Program
 
 
         // Problem 5
-        UniversityStudent u1 = new UniversityStudent("Hopper", 13, 'A');
-        UniversityStudent u2 = new UniversityStudent("Byers", 14, 'B');
-        u1.DisplayDetails(u1);
-        u2.DisplayDetails(u2);
-        UniversityStudent.DisplayTotalStudents();
+        //UniversityStudent u1 = new UniversityStudent("Hopper", 13, 'A');
+        //UniversityStudent u2 = new UniversityStudent("Byers", 14, 'B');
+        //u1.DisplayDetails(u1);
+        //u2.DisplayDetails(u2);
+        //UniversityStudent.DisplayTotalStudents();
 
+
+        // Problem 6
+        VehicleRegistration v = new VehicleRegistration("Robin", "Bus", 0203);
+        VehicleRegistration.UpdateRegistrationFee(2000);
+        v.DisplayDetails(v);
 
         Console.ReadKey();
         
