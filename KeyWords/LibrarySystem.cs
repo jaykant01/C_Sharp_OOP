@@ -32,7 +32,7 @@ public class LibrarySystem
     {
         if (obj is LibrarySystem)
         {
-            Console.WriteLine(" Library Management System ");
+            Console.WriteLine("Library Management System: ");
             Console.WriteLine("Title: " + title);
             Console.WriteLine("Author: " + author);
             Console.WriteLine("ISBN : " + ISBN);

@@ -14,9 +14,17 @@ class Program
 
 
         // Problem 2
-        LibrarySystem l1 = new LibrarySystem("Knowledge is Power", "Unknown", 4242);
-        l1.Display(l1);
-        LibrarySystem.DisplayLibraryName();
+        //LibrarySystem l1 = new LibrarySystem("Knowledge is Power", "Unknown", 4242);
+        //l1.Display(l1);
+        //LibrarySystem.DisplayLibraryName();
+
+
+        // Problem 3
+        EmployeeSystem emp1 = new EmployeeSystem("Henry", "Junior Developer", 1001);
+        EmployeeSystem emp2 = new EmployeeSystem("Vecna", "Senior Develpoer", 1002);
+        emp1.DisplayDetails(emp1);
+        emp2.DisplayDetails(emp2);
+        EmployeeSystem.DisplayTotalEmployees();
 
         Console.ReadKey();
         
