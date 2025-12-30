@@ -28,9 +28,18 @@ class Program
 
 
         // Problem 4
-        ShoppingSystem s = new ShoppingSystem("Samsung Galaxy S25 Utlra", 135000, 10, 1);
-        ShoppingSystem.UpdateDiscount(25);
-        s.DisplayDetails(s);
+        //ShoppingSystem s = new ShoppingSystem("Samsung Galaxy S25 Utlra", 135000, 10, 1);
+        //ShoppingSystem.UpdateDiscount(25);
+        //s.DisplayDetails(s);
+
+
+        // Problem 5
+        UniversityStudent u1 = new UniversityStudent("Hopper", 13, 'A');
+        UniversityStudent u2 = new UniversityStudent("Byers", 14, 'B');
+        u1.DisplayDetails(u1);
+        u2.DisplayDetails(u2);
+        UniversityStudent.DisplayTotalStudents();
+
 
         Console.ReadKey();
         
