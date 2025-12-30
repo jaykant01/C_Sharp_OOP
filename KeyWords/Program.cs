@@ -20,11 +20,17 @@ class Program
 
 
         // Problem 3
-        EmployeeSystem emp1 = new EmployeeSystem("Henry", "Junior Developer", 1001);
-        EmployeeSystem emp2 = new EmployeeSystem("Vecna", "Senior Develpoer", 1002);
-        emp1.DisplayDetails(emp1);
-        emp2.DisplayDetails(emp2);
-        EmployeeSystem.DisplayTotalEmployees();
+        //EmployeeSystem emp1 = new EmployeeSystem("Henry", "Junior Developer", 1001);
+        //EmployeeSystem emp2 = new EmployeeSystem("Vecna", "Senior Develpoer", 1002);
+        //emp1.DisplayDetails(emp1);
+        //emp2.DisplayDetails(emp2);
+        //EmployeeSystem.DisplayTotalEmployees();
+
+
+        // Problem 4
+        ShoppingSystem s = new ShoppingSystem("Samsung Galaxy S25 Utlra", 135000, 10, 1);
+        ShoppingSystem.UpdateDiscount(25);
+        s.DisplayDetails(s);
 
         Console.ReadKey();
         
