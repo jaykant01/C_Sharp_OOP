@@ -1,10 +1,10 @@
 ﻿namespace KeyWords;
-
+/* Create a Product class to manage shopping cart items with the following features:
+ */
 public class ShoppingSystem
 {
     // Static variable
     public static int discount = 10;
-    private static int totalEmployees = 0;
 
     // Instance Variable
     public string productName;
