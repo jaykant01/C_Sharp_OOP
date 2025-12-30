@@ -4,6 +4,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        // Problem 1
+        BankSystem b1 = new BankSystem(101, "Nancy", 50000);
+        BankSystem b2 = new BankSystem(102, "Jonathan", 30000);
+
+        b1.DisplayDetails(b1);
+        b2.DisplayDetails(b2);
+        BankSystem.GetTotalAccounts();
+
+        Console.ReadKey();
+        
     }
 }
