@@ -42,9 +42,17 @@ class Program
 
 
         // Problem 6
-        VehicleRegistration v = new VehicleRegistration("Robin", "Bus", 0203);
-        VehicleRegistration.UpdateRegistrationFee(2000);
-        v.DisplayDetails(v);
+        //VehicleRegistration v = new VehicleRegistration("Robin", "Bus", 0203);
+        //VehicleRegistration.UpdateRegistrationFee(2000);
+        //v.DisplayDetails(v);
+
+
+        // Problem 7
+        HospitalSystem h1 = new HospitalSystem("Mrs Wheeler", 38, "Attacked", 01);
+        HospitalSystem h2 = new HospitalSystem("Max", 20, "Comma", 02);
+        h1.DisplayDetails(h1);
+        h2.DisplayDetails(h2);
+        HospitalSystem.GetTotalPatients();
 
         Console.ReadKey();
         
