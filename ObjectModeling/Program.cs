@@ -73,22 +73,44 @@ class Program
 
 
         // (Association and Communication)
-        Hospital.Doctor drSmith = new Hospital.Doctor("Smith");
-        Hospital.Doctor drLee = new Hospital.Doctor("Lee");
+        //Hospital.Doctor drSmith = new Hospital.Doctor("Smith");
+        //Hospital.Doctor drLee = new Hospital.Doctor("Lee");
 
-        Hospital.Patient alice = new Hospital.Patient("Alice");
-        Hospital.Patient bob = new Hospital.Patient("Bob");
+        //Hospital.Patient alice = new Hospital.Patient("Alice");
+        //Hospital.Patient bob = new Hospital.Patient("Bob");
 
-        drSmith.Consult(alice);
-        drSmith.Consult(bob);
-        drLee.Consult(alice);  
-        drLee.Consult(bob);
+        //drSmith.Consult(alice);
+        //drSmith.Consult(bob);
+        //drLee.Consult(alice);  
+        //drLee.Consult(bob);
 
-        drSmith.ShowPatients();
-        drLee.ShowPatients();
+        //drSmith.ShowPatients();
+        //drLee.ShowPatients();
 
-        alice.ShowDoctors();
-        bob.ShowDoctors();
+        //alice.ShowDoctors();
+        //bob.ShowDoctors();
+
+
+
+        // Commuincation and aggregation E-commerce
+        Product laptop = new Product("Laptop", 999.99);
+        Product mouse = new Product("Wireless Mouse", 25.50);
+        Product keyboard = new Product("Mechanical Keyboard", 129.99);
+
+        Customer1 alice = new Customer1("Alice Wonder", "alice@email.com");
+
+        Order order1 = alice.PlaceOrder(1001);
+        order1.AddProduct(laptop);
+        order1.AddProduct(mouse);
+
+        Order order2 = alice.PlaceOrder(1002);
+        order2.AddProduct(keyboard);
+        order2.AddProduct(mouse);
+
+        order1.ShowOrderDetails();
+        order2.ShowOrderDetails();
+
+        alice.ShowMyOrders();
 
         Console.ReadKey();
     }
