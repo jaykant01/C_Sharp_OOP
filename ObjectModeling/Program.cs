@@ -37,39 +37,58 @@ class Program
 
 
         // Association and Aggregation
-        var mySchool = new School("GLA University");
+        //var mySchool = new School("GLA University");
 
-        var student1 = new Student(101, "Alice Johnson");
-        var student2 = new Student(102, "Bob Smith");
-        var student3 = new Student(103, "Charlie Brown");
+        //var student1 = new Student(101, "Alice Johnson");
+        //var student2 = new Student(102, "Bob Smith");
+        //var student3 = new Student(103, "Charlie Brown");
 
-        var courseA = new Course("Introduction to C#", "CS101");
-        var courseB = new Course("Data Structures", "CS201");
-        var courseC = new Course("Web Development", "WD301");
+        //var courseA = new Course("Introduction to C#", "CS101");
+        //var courseB = new Course("Data Structures", "CS201");
+        //var courseC = new Course("Web Development", "WD301");
 
 
-        mySchool.AddStudent(student1);
-        mySchool.AddStudent(student2);
-        mySchool.AddStudent(student3);
-        mySchool.AddCourse(courseA);
-        mySchool.AddCourse(courseB);
-        mySchool.AddCourse(courseC);
+        //mySchool.AddStudent(student1);
+        //mySchool.AddStudent(student2);
+        //mySchool.AddStudent(student3);
+        //mySchool.AddCourse(courseA);
+        //mySchool.AddCourse(courseB);
+        //mySchool.AddCourse(courseC);
 
-        student1.EnrollInCourse(courseA);
-        student1.EnrollInCourse(courseC);
+        //student1.EnrollInCourse(courseA);
+        //student1.EnrollInCourse(courseC);
 
-        student2.EnrollInCourse(courseA);
-        student2.EnrollInCourse(courseB);
+        //student2.EnrollInCourse(courseA);
+        //student2.EnrollInCourse(courseB);
 
-        student3.EnrollInCourse(courseB);
+        //student3.EnrollInCourse(courseB);
 
-        mySchool.DisplaySchoolDetails();
+        //mySchool.DisplaySchoolDetails();
 
-        student1.ViewEnrolledCourses();
-        student2.ViewEnrolledCourses();
+        //student1.ViewEnrolledCourses();
+        //student2.ViewEnrolledCourses();
 
-        courseA.DisplayEnrolledStudents();
-        courseB.DisplayEnrolledStudents();
+        //courseA.DisplayEnrolledStudents();
+        //courseB.DisplayEnrolledStudents();
+
+
+        // (Association and Communication)
+        Hospital.Doctor drSmith = new Hospital.Doctor("Smith");
+        Hospital.Doctor drLee = new Hospital.Doctor("Lee");
+
+        Hospital.Patient alice = new Hospital.Patient("Alice");
+        Hospital.Patient bob = new Hospital.Patient("Bob");
+
+        drSmith.Consult(alice);
+        drSmith.Consult(bob);
+        drLee.Consult(alice);  
+        drLee.Consult(bob);
+
+        drSmith.ShowPatients();
+        drLee.ShowPatients();
+
+        alice.ShowDoctors();
+        bob.ShowDoctors();
 
         Console.ReadKey();
     }
