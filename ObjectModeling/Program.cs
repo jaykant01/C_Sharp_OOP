@@ -23,16 +23,53 @@ class Program
 
 
         // Association
-        Bank sbi = new Bank("State Bank of India");
-        Customer customer1 = new Customer("Jaykant");
+        //Bank sbi = new Bank("State Bank of India");
+        //Customer customer1 = new Customer("Jay");
 
-        Account acc1 = sbi.OpenAccount(customer1, 1001);
-        acc1.Deposit(5000);
+        //Account acc1 = sbi.OpenAccount(customer1, 1001);
+        //acc1.Deposit(5000);
 
-        Account acc2 = sbi.OpenAccount(customer1, 1002);
-        acc2.Deposit(12000);
+        //Account acc2 = sbi.OpenAccount(customer1, 1002);
+        //acc2.Deposit(12000);
 
-        customer1.ViewBalance();
+        //customer1.ViewBalance();
+
+
+
+        // Association and Aggregation
+        var mySchool = new School("GLA University");
+
+        var student1 = new Student(101, "Alice Johnson");
+        var student2 = new Student(102, "Bob Smith");
+        var student3 = new Student(103, "Charlie Brown");
+
+        var courseA = new Course("Introduction to C#", "CS101");
+        var courseB = new Course("Data Structures", "CS201");
+        var courseC = new Course("Web Development", "WD301");
+
+
+        mySchool.AddStudent(student1);
+        mySchool.AddStudent(student2);
+        mySchool.AddStudent(student3);
+        mySchool.AddCourse(courseA);
+        mySchool.AddCourse(courseB);
+        mySchool.AddCourse(courseC);
+
+        student1.EnrollInCourse(courseA);
+        student1.EnrollInCourse(courseC);
+
+        student2.EnrollInCourse(courseA);
+        student2.EnrollInCourse(courseB);
+
+        student3.EnrollInCourse(courseB);
+
+        mySchool.DisplaySchoolDetails();
+
+        student1.ViewEnrolledCourses();
+        student2.ViewEnrolledCourses();
+
+        courseA.DisplayEnrolledStudents();
+        courseB.DisplayEnrolledStudents();
 
         Console.ReadKey();
     }
