@@ -114,20 +114,60 @@ class Program
 
 
         // Company (Composition)
-        Company myCompany = new Company(null);
+        //Company myCompany = new Company("Google India");
 
-        myCompany.AddDepartment("HR");
-        myCompany.AddDepartment("IT");
+        //myCompany.AddDepartment("HR");
+        //myCompany.AddDepartment("IT");
 
-        myCompany.AddEmployeeToDepartment("HR", "Bob");
-        myCompany.AddEmployeeToDepartment("IT", "Charlie");
-        myCompany.AddEmployeeToDepartment("IT", "Diana");
+        //myCompany.AddEmployeeToDepartment("HR", "Bob");
+        //myCompany.AddEmployeeToDepartment("IT", "Charlie");
+        //myCompany.AddEmployeeToDepartment("IT", "Diana");
 
-        myCompany.ShowStructure();
+        //myCompany.ShowStructure();
 
-        Console.WriteLine("Company object is no longer referenced.");
-        Console.WriteLine("All departments and employees will be deleted automatically (garbage collected).");
+        //Console.WriteLine("Company object is no longer referenced.");
+        //Console.WriteLine("All departments and employees will be deleted automatically (garbage collected).");
 
-        Console.ReadKey();
+
+
+        // Agreggation and Composition
+        var faculty1 = new Faculty("Dr. Alice");
+        var faculty2 = new Faculty("Prof. Bob");
+        var faculty3 = new Faculty("Dr. Carol");
+
+        Console.WriteLine(" Before university destruction ");
+
+        var university = new University("GLA University");
+
+        var csDepartment = university.CreateDepartment("Computer Science");
+        var mathDepartment = university.CreateDepartment("Mathematics");
+
+        csDepartment.AddFaculty(faculty1);
+        csDepartment.AddFaculty(faculty2);
+        mathDepartment.AddFaculty(faculty3);
+
+        university.ShowInfo();
+
+        Console.WriteLine("\nStandalone faculty still exists (aggregation):");
+        faculty1.ShowInfo();
+        faculty2.ShowInfo();
+
+        Console.WriteLine("\n Deleting university ");
+        university = null;
+
+
+        // For demonstration purposes only
+        GC.Collect();
+        GC.WaitForPendingFinalizers();
+
+        Console.WriteLine("\nAfter university is gone:");
+        Console.WriteLine("Faculty members still exist:");
+        faculty1.ShowInfo();
+        faculty2.ShowInfo();
+        faculty3.ShowInfo();
+
+        Console.WriteLine("\nDepartments disappeared with university (composition)");
+
+    Console.ReadKey();
     }
 }
