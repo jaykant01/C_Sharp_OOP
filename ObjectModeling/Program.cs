@@ -93,24 +93,40 @@ class Program
 
 
         // Commuincation and aggregation E-commerce
-        Product laptop = new Product("Laptop", 999.99);
-        Product mouse = new Product("Wireless Mouse", 25.50);
-        Product keyboard = new Product("Mechanical Keyboard", 129.99);
+        //Product laptop = new Product("Laptop", 999.99);
+        //Product mouse = new Product("Wireless Mouse", 25.50);
+        //Product keyboard = new Product("Mechanical Keyboard", 129.99);
 
-        Customer1 alice = new Customer1("Alice Wonder", "alice@email.com");
+        //Customer1 alice = new Customer1("Alice Wonder", "alice@email.com");
 
-        Order order1 = alice.PlaceOrder(1001);
-        order1.AddProduct(laptop);
-        order1.AddProduct(mouse);
+        //Order order1 = alice.PlaceOrder(1001);
+        //order1.AddProduct(laptop);
+        //order1.AddProduct(mouse);
 
-        Order order2 = alice.PlaceOrder(1002);
-        order2.AddProduct(keyboard);
-        order2.AddProduct(mouse);
+        //Order order2 = alice.PlaceOrder(1002);
+        //order2.AddProduct(keyboard);
+        //order2.AddProduct(mouse);
 
-        order1.ShowOrderDetails();
-        order2.ShowOrderDetails();
+        //order1.ShowOrderDetails();
+        //order2.ShowOrderDetails();
 
-        alice.ShowMyOrders();
+        //alice.ShowMyOrders();
+
+
+        // Company (Composition)
+        Company myCompany = new Company(null);
+
+        myCompany.AddDepartment("HR");
+        myCompany.AddDepartment("IT");
+
+        myCompany.AddEmployeeToDepartment("HR", "Bob");
+        myCompany.AddEmployeeToDepartment("IT", "Charlie");
+        myCompany.AddEmployeeToDepartment("IT", "Diana");
+
+        myCompany.ShowStructure();
+
+        Console.WriteLine("Company object is no longer referenced.");
+        Console.WriteLine("All departments and employees will be deleted automatically (garbage collected).");
 
         Console.ReadKey();
     }
