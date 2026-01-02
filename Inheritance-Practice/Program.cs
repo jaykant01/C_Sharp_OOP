@@ -112,14 +112,25 @@ class Program
 
 
         // Problem 2
-        Person teacher = new Teacher("Mr. Sharma", 40, "Mathematics");
-        teacher.DisplayRole();
+        //Person teacher = new Teacher("Mr. Sharma", 40, "Mathematics");
+        //teacher.DisplayRole();
 
-        Person student = new Student("Ravi", 16, "10th");
-        student.DisplayRole();
+        //Person student = new Student("Ravi", 16, "10th");
+        //student.DisplayRole();
 
-        Person staff = new Staff("Suresh", 35, "Administration");
-        staff.DisplayRole();
+        //Person staff = new Staff("Suresh", 35, "Administration");
+        //staff.DisplayRole();
+
+
+
+        // Hybrib Inheritance
+
+        // Problem 1
+        IWorker chef = new Chef("Rahul", 101);
+        chef.PerformDuties();
+
+        IWorker waiter = new Waiter("Amit", 102);
+        waiter.PerformDuties();
 
 
 
