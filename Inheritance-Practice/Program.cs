@@ -6,7 +6,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Single Inheritance
+        // Assisted Problems
+
         // Problem 1
         //Animal animal = new Animal();
         //animal.MakeSound();
@@ -32,18 +33,32 @@ class Program
 
 
         // Problem 3
-        Vehicle[] vehicles =
-        {
-            new Car(180, "Petrol", 5),
-            new Truck(120, "Diesel", 5000),
-            new Motorcycle(150, "Petrol", false)
-        };
+        //Vehicle[] vehicles =
+        //{
+        //    new Car(180, "Petrol", 5),
+        //    new Truck(120, "Diesel", 5000),
+        //    new Motorcycle(150, "Petrol", false)
+        //};
 
-        foreach (Vehicle vehicle in vehicles)
-        {
-            vehicle.DisplayInfo();
-            Console.WriteLine();
-        }
+        //foreach (Vehicle vehicle in vehicles)
+        //{
+        //    vehicle.DisplayInfo();
+        //    Console.WriteLine();
+        //}
+
+
+        // Single Inheritance
+
+        //Problem 1
+        Author auth = new Author(
+            "C# Programming",
+            2024,
+            "John Doe",
+            "Software developer and technical writer"
+        );
+
+        auth.DisplayInfo();
+
 
         Console.ReadKey();
     }
