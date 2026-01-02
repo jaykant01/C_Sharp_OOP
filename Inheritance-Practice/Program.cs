@@ -18,6 +18,7 @@ class Program
         //Bird bird = new Bird();
         //bird.MakeSound();
 
+
         // Problem 2
         //Employee manager = new Manager("Alice", 101, 80000, 10);
         //manager.DisplayDetails();
@@ -47,6 +48,8 @@ class Program
         //}
 
 
+
+
         // Single Inheritance
 
         //Problem 1
@@ -56,8 +59,22 @@ class Program
 
 
         // Problem 2
-        Thermostat thermostat = new Thermostat(101, "ON", 22.5);
-        thermostat.DisplayStatus();
+        //Thermostat thermostat = new Thermostat(101, "ON", 22.5);
+        //thermostat.DisplayStatus();
+
+
+
+
+        // Multilevel Inheritance
+
+        // Problem 1
+        Order order = new Order(1, DateTime.Now);
+        Order shipped = new ShippedOrder(2, DateTime.Now, "RGHJFJ123");
+        Order delivered = new DeliveredOrder(3, DateTime.Now, "RGHJFJ123", DateTime.Now.AddDays(3));
+
+        Console.WriteLine(order.GetOrderStatus());
+        Console.WriteLine(shipped.GetOrderStatus());
+        Console.WriteLine(delivered.GetOrderStatus());
 
         Console.ReadKey();
     }
