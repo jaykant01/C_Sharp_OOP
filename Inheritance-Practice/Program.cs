@@ -68,13 +68,26 @@ class Program
         // Multilevel Inheritance
 
         // Problem 1
-        Order order = new Order(1, DateTime.Now);
-        Order shipped = new ShippedOrder(2, DateTime.Now, "RGHJFJ123");
-        Order delivered = new DeliveredOrder(3, DateTime.Now, "RGHJFJ123", DateTime.Now.AddDays(3));
+        //Order order = new Order(1, DateTime.Now);
+        //Order shipped = new ShippedOrder(2, DateTime.Now, "RGHJFJ123");
+        //Order delivered = new DeliveredOrder(3, DateTime.Now, "RGHJFJ123", DateTime.Now.AddDays(3));
 
-        Console.WriteLine(order.GetOrderStatus());
-        Console.WriteLine(shipped.GetOrderStatus());
-        Console.WriteLine(delivered.GetOrderStatus());
+        //Console.WriteLine(order.GetOrderStatus());
+        //Console.WriteLine(shipped.GetOrderStatus());
+        //Console.WriteLine(delivered.GetOrderStatus());
+
+
+        // Propblem 2
+        Course basic = new Course("OOP Concepts", 40);
+        basic.DisplayCourseInfo();
+        Console.WriteLine();
+
+        Course onlineCourse = new OnlineCourse("C# Online Course", 60, "Udemy", true);
+        onlineCourse.DisplayCourseInfo();
+        Console.WriteLine();
+
+        Course paidCourse = new PaidOnlineCourse("Advanced C#", 80, "Coursera", true, 5000, 20);
+        paidCourse.DisplayCourseInfo();
 
         Console.ReadKey();
     }
