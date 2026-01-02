@@ -113,25 +113,57 @@ class Program
 
 
         // Problem 5
-        List<LibraryItem> items = new List<LibraryItem>();
+        //List<LibraryItem> items = new List<LibraryItem>();
 
-        items.Add(new Book(1, "C# Basics", "John"));
-        items.Add(new Magazine(2, "Tech Monthly", "Editor"));
-        items.Add(new DVD(3, "OOP Concepts", "Trainer"));
+        //items.Add(new Book(1, "C# Basics", "John"));
+        //items.Add(new Magazine(2, "Tech Monthly", "Editor"));
+        //items.Add(new DVD(3, "OOP Concepts", "Trainer"));
 
-        // Polymorphism in action
-        foreach (LibraryItem item in items)
+        //// Polymorphism in action
+        //foreach (LibraryItem item in items)
+        //{
+        //    item.GetItemDetails();
+        //    Console.WriteLine("Loan Days: " + item.GetLoanDuration());
+
+        //    if (item is IReservable reservable)
+        //    {
+        //        Console.WriteLine("Can Reserve: " + reservable.CheckAvailability());
+        //    }
+
+        //    Console.WriteLine();
+        //}
+
+
+        // Problem 6
+        List<FoodItem> foodItems = new List<FoodItem>();
+
+        foodItems.Add(new VegItem("Paneer Burger", 120, 2));
+        foodItems.Add(new NonVegItem("Chicken Pizza", 300, 1));
+
+        // Polymorphism demonstration
+        foreach (FoodItem item in foodItems)
         {
             item.GetItemDetails();
-            Console.WriteLine("Loan Days: " + item.GetLoanDuration());
 
-            if (item is IReservable reservable)
+            double totalPrice = item.CalculateTotalPrice();
+            double discount = 0;
+
+            if (item is IDiscountable discountItem)
             {
-                Console.WriteLine("Can Reserve: " + reservable.CheckAvailability());
+                discount = discountItem.ApplyDiscount();
+                Console.WriteLine("Discount   : " + discount);
+                Console.WriteLine("Offer      : " +
+                                  discountItem.GetDiscountDetails());
             }
 
+            double finalAmount = totalPrice - discount;
+
+            Console.WriteLine("Total Price: " + totalPrice);
+            Console.WriteLine("Final Bill : " + finalAmount);
             Console.WriteLine();
         }
+
+
         Console.ReadKey();
         
     }
