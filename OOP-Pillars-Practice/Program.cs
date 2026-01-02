@@ -24,36 +24,66 @@ class Program
 
 
         // Problem 2
-        static void DisplayFinalPrice(List<Product> products)
+        //static void DisplayFinalPrice(List<Product> products)
+        //{
+        //    foreach (Product p in products)
+        //    {
+        //        double tax = 0;
+
+        //        if (p is ITaxable taxableProduct)
+        //        {
+        //            tax = taxableProduct.CalculateTax();
+        //        }
+
+        //        double discount = p.CalculateDiscount();
+        //        double finalPrice = p.Price + tax - discount;
+
+        //        Console.WriteLine("Product Name : " + p.Name);
+        //        Console.WriteLine("Base Price  : " + p.Price);
+        //        Console.WriteLine("Discount    : " + discount);
+        //        Console.WriteLine("Tax         : " + tax);
+        //        Console.WriteLine("Final Price : " + finalPrice);
+        //        Console.WriteLine();
+        //    }
+        //}
+
+        //List<Product> products = new List<Product>();
+
+        //products.Add(new Electronics(1, "Laptop", 50000));
+        //products.Add(new Clothing(2, "Shirt", 2000));
+        //products.Add(new Groceries(3, "Rice", 1000));
+
+        //DisplayFinalPrice(products);
+
+
+
+        // Problem 3
+        List<Vehicle> vehicles = new List<Vehicle>();
+
+        vehicles.Add(new Car("CAR101", 2000, "CAR-INS-001"));
+        vehicles.Add(new Bike("BIKE202", 500, "BIKE-INS-002"));
+        vehicles.Add(new Truck("TRUCK303", 4000, "TRUCK-INS-003"));
+
+        int rentalDays = 3;
+
+        // Polymorphism demonstration
+        foreach (Vehicle v in vehicles)
         {
-            foreach (Product p in products)
+            double rentalCost = v.CalculateRentalCost(rentalDays);
+            double insuranceCost = 0;
+
+            if (v is IInsurable insurableVehicle)
             {
-                double tax = 0;
-
-                if (p is ITaxable taxableProduct)
-                {
-                    tax = taxableProduct.CalculateTax();
-                }
-
-                double discount = p.CalculateDiscount();
-                double finalPrice = p.Price + tax - discount;
-
-                Console.WriteLine("Product Name : " + p.Name);
-                Console.WriteLine("Base Price  : " + p.Price);
-                Console.WriteLine("Discount    : " + discount);
-                Console.WriteLine("Tax         : " + tax);
-                Console.WriteLine("Final Price : " + finalPrice);
-                Console.WriteLine();
+                insuranceCost = insurableVehicle.CalculateInsurance();
             }
+
+            Console.WriteLine("Vehicle Type   : " + v.Type);
+            Console.WriteLine("Vehicle Number : " + v.VehicleNumber);
+            Console.WriteLine("Rental Cost   : " + rentalCost);
+            Console.WriteLine("Insurance     : " + insuranceCost);
+            Console.WriteLine();
         }
 
-        List<Product> products = new List<Product>();
-
-        products.Add(new Electronics(1, "Laptop", 50000));
-        products.Add(new Clothing(2, "Shirt", 2000));
-        products.Add(new Groceries(3, "Rice", 1000));
-
-        DisplayFinalPrice(products);
         Console.ReadKey();
     }
 }
