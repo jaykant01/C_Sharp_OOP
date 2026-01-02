@@ -95,21 +95,35 @@ class Program
         // Hierarchical Inheritance
 
         // Problem 1
-        BankAccount bacc = new BankAccount(42150, 50000);
-        bacc.DisplayAccountType();
-        Console.WriteLine();
+        //BankAccount bacc = new BankAccount(42150, 50000);
+        //bacc.DisplayAccountType();
+        //Console.WriteLine();
 
-        SavingsAccount sb = new SavingsAccount(457488, 80000, 10);
-        sb.DisplayAccountType();
-        Console.WriteLine();
+        //SavingsAccount sb = new SavingsAccount(457488, 80000, 10);
+        //sb.DisplayAccountType();
+        //Console.WriteLine();
 
-        CheckingAccount cb = new CheckingAccount(457488, 80000, 50000);
-        cb.DisplayAccountType();
-        Console.WriteLine();
+        //CheckingAccount cb = new CheckingAccount(457488, 80000, 50000);
+        //cb.DisplayAccountType();
+        //Console.WriteLine();
 
-        FixedDepositAccount fb = new FixedDepositAccount(457488, 80000, 20);
-        fb.DisplayAccountType();
+        //FixedDepositAccount fb = new FixedDepositAccount(457488, 80000, 20);
+        //fb.DisplayAccountType();
 
-    Console.ReadKey();
+
+        // Problem 2
+        Person teacher = new Teacher("Mr. Sharma", 40, "Mathematics");
+        teacher.DisplayRole();
+
+        Person student = new Student("Ravi", 16, "10th");
+        student.DisplayRole();
+
+        Person staff = new Staff("Suresh", 35, "Administration");
+        staff.DisplayRole();
+
+
+
+
+        Console.ReadKey();
     }
 }
