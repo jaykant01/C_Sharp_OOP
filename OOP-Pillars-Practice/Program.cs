@@ -86,31 +86,53 @@ class Program
 
 
         // Problem 4
-        List<BankAccount> accounts = new List<BankAccount>();
+        //List<BankAccount> accounts = new List<BankAccount>();
 
-        BankAccount acc1 = new SavingsAccount(101, "Steve", 50000);
-        BankAccount acc2 = new CurrentAccount(102, "Jonathan", 80000);
+        //BankAccount acc1 = new SavingsAccount(101, "Steve", 50000);
+        //BankAccount acc2 = new CurrentAccount(102, "Jonathan", 80000);
 
-        accounts.Add(acc1);
-        accounts.Add(acc2);
+        //accounts.Add(acc1);
+        //accounts.Add(acc2);
 
-        // Polymorphism
-        foreach (BankAccount acc in accounts)
+        //// Polymorphism
+        //foreach (BankAccount acc in accounts)
+        //{
+        //    Console.WriteLine("Account Holder : " + acc.HolderName);
+        //    Console.WriteLine("Account Number : " + acc.AccountNumber);
+        //    Console.WriteLine("Balance        : " + acc.Balance);
+        //    Console.WriteLine("Interest       : " + acc.CalculateInterest());
+
+        //    // Loan check
+        //    if (acc is ILoanable loanAccount)
+        //    {
+        //        loanAccount.ApplyForLoan();
+        //        Console.WriteLine("Loan Eligibility : " + loanAccount.CalculateLoanEligibility());
+        //    }
+        //    Console.WriteLine();
+        //}
+
+
+        // Problem 5
+        List<LibraryItem> items = new List<LibraryItem>();
+
+        items.Add(new Book(1, "C# Basics", "John"));
+        items.Add(new Magazine(2, "Tech Monthly", "Editor"));
+        items.Add(new DVD(3, "OOP Concepts", "Trainer"));
+
+        // Polymorphism in action
+        foreach (LibraryItem item in items)
         {
-            Console.WriteLine("Account Holder : " + acc.HolderName);
-            Console.WriteLine("Account Number : " + acc.AccountNumber);
-            Console.WriteLine("Balance        : " + acc.Balance);
-            Console.WriteLine("Interest       : " + acc.CalculateInterest());
+            item.GetItemDetails();
+            Console.WriteLine("Loan Days: " + item.GetLoanDuration());
 
-            // Loan check
-            if (acc is ILoanable loanAccount)
+            if (item is IReservable reservable)
             {
-                loanAccount.ApplyForLoan();
-                Console.WriteLine("Loan Eligibility : " + loanAccount.CalculateLoanEligibility());
+                Console.WriteLine("Can Reserve: " + reservable.CheckAvailability());
             }
+
             Console.WriteLine();
         }
-            Console.ReadKey();
+        Console.ReadKey();
         
     }
 }
