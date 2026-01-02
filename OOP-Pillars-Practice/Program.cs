@@ -58,32 +58,59 @@ class Program
 
 
         // Problem 3
-        List<Vehicle> vehicles = new List<Vehicle>();
+        //List<Vehicle> vehicles = new List<Vehicle>();
 
-        vehicles.Add(new Car("CAR101", 2000, "CAR-INS-001"));
-        vehicles.Add(new Bike("BIKE202", 500, "BIKE-INS-002"));
-        vehicles.Add(new Truck("TRUCK303", 4000, "TRUCK-INS-003"));
+        //vehicles.Add(new Car("CAR101", 2000, "CAR-INS-001"));
+        //vehicles.Add(new Bike("BIKE202", 500, "BIKE-INS-002"));
+        //vehicles.Add(new Truck("TRUCK303", 4000, "TRUCK-INS-003"));
 
-        int rentalDays = 3;
+        //int rentalDays = 3;
 
-        // Polymorphism demonstration
-        foreach (Vehicle v in vehicles)
+        //// Polymorphism demonstration
+        //foreach (Vehicle v in vehicles)
+        //{
+        //    double rentalCost = v.CalculateRentalCost(rentalDays);
+        //    double insuranceCost = 0;
+
+        //    if (v is IInsurable insurableVehicle)
+        //    {
+        //        insuranceCost = insurableVehicle.CalculateInsurance();
+        //    }
+
+        //    Console.WriteLine("Vehicle Type   : " + v.Type);
+        //    Console.WriteLine("Vehicle Number : " + v.VehicleNumber);
+        //    Console.WriteLine("Rental Cost   : " + rentalCost);
+        //    Console.WriteLine("Insurance     : " + insuranceCost);
+        //    Console.WriteLine();
+        //}
+
+
+        // Problem 4
+        List<BankAccount> accounts = new List<BankAccount>();
+
+        BankAccount acc1 = new SavingsAccount(101, "Steve", 50000);
+        BankAccount acc2 = new CurrentAccount(102, "Jonathan", 80000);
+
+        accounts.Add(acc1);
+        accounts.Add(acc2);
+
+        // Polymorphism
+        foreach (BankAccount acc in accounts)
         {
-            double rentalCost = v.CalculateRentalCost(rentalDays);
-            double insuranceCost = 0;
+            Console.WriteLine("Account Holder : " + acc.HolderName);
+            Console.WriteLine("Account Number : " + acc.AccountNumber);
+            Console.WriteLine("Balance        : " + acc.Balance);
+            Console.WriteLine("Interest       : " + acc.CalculateInterest());
 
-            if (v is IInsurable insurableVehicle)
+            // Loan check
+            if (acc is ILoanable loanAccount)
             {
-                insuranceCost = insurableVehicle.CalculateInsurance();
+                loanAccount.ApplyForLoan();
+                Console.WriteLine("Loan Eligibility : " + loanAccount.CalculateLoanEligibility());
             }
-
-            Console.WriteLine("Vehicle Type   : " + v.Type);
-            Console.WriteLine("Vehicle Number : " + v.VehicleNumber);
-            Console.WriteLine("Rental Cost   : " + rentalCost);
-            Console.WriteLine("Insurance     : " + insuranceCost);
             Console.WriteLine();
         }
-
-        Console.ReadKey();
+            Console.ReadKey();
+        
     }
 }
