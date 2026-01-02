@@ -78,17 +78,38 @@ class Program
 
 
         // Propblem 2
-        Course basic = new Course("OOP Concepts", 40);
-        basic.DisplayCourseInfo();
+        //Course basic = new Course("OOP Concepts", 40);
+        //basic.DisplayCourseInfo();
+        //Console.WriteLine();
+
+        //Course onlineCourse = new OnlineCourse("C# Online Course", 60, "Udemy", true);
+        //onlineCourse.DisplayCourseInfo();
+        //Console.WriteLine();
+
+        //Course paidCourse = new PaidOnlineCourse("Advanced C#", 80, "Coursera", true, 5000, 20);
+        //paidCourse.DisplayCourseInfo();
+
+
+
+
+        // Hierarchical Inheritance
+
+        // Problem 1
+        BankAccount bacc = new BankAccount(42150, 50000);
+        bacc.DisplayAccountType();
         Console.WriteLine();
 
-        Course onlineCourse = new OnlineCourse("C# Online Course", 60, "Udemy", true);
-        onlineCourse.DisplayCourseInfo();
+        SavingsAccount sb = new SavingsAccount(457488, 80000, 10);
+        sb.DisplayAccountType();
         Console.WriteLine();
 
-        Course paidCourse = new PaidOnlineCourse("Advanced C#", 80, "Coursera", true, 5000, 20);
-        paidCourse.DisplayCourseInfo();
+        CheckingAccount cb = new CheckingAccount(457488, 80000, 50000);
+        cb.DisplayAccountType();
+        Console.WriteLine();
 
-        Console.ReadKey();
+        FixedDepositAccount fb = new FixedDepositAccount(457488, 80000, 20);
+        fb.DisplayAccountType();
+
+    Console.ReadKey();
     }
 }
