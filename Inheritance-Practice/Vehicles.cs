@@ -1,5 +1,8 @@
 ﻿namespace Inheritance_Practice;
-
+/* ○ Description: Model a vehicle system where Vehicle is the superclass and
+ElectricVehicle and PetrolVehicle are subclasses. Additionally, create a
+Refuelable interface implemented by PetrolVehicle.
+ */
 public class Vehicles
 {
     public int MaxSpeed;
