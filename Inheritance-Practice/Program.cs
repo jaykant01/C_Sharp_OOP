@@ -126,12 +126,19 @@ class Program
         // Hybrib Inheritance
 
         // Problem 1
-        IWorker chef = new Chef("Rahul", 101);
-        chef.PerformDuties();
+        //IWorker chef = new Chef("Rahul", 101);
+        //chef.PerformDuties();
 
-        IWorker waiter = new Waiter("Amit", 102);
-        waiter.PerformDuties();
+        //IWorker waiter = new Waiter("Amit", 102);
+        //waiter.PerformDuties();
 
+
+        // Problem 2
+        ElectricVehicle ev = new ElectricVehicle(150, "Tesla Model 3");
+        PetrolVehicle pv = new PetrolVehicle(180, "Honda City");
+
+        ev.Charge();
+        pv.Refuel();
 
 
 
