@@ -50,15 +50,14 @@ class Program
         // Single Inheritance
 
         //Problem 1
-        Author auth = new Author(
-            "C# Programming",
-            2024,
-            "John Doe",
-            "Software developer and technical writer"
-        );
+        //Author auth = new Author("C# Programming", 2024, "John Doe",
+        //    "Software developer and technical writer");
+        //auth.DisplayInfo();
 
-        auth.DisplayInfo();
 
+        // Problem 2
+        Thermostat thermostat = new Thermostat(101, "ON", 22.5);
+        thermostat.DisplayStatus();
 
         Console.ReadKey();
     }
