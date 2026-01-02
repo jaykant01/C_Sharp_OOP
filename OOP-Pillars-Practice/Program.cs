@@ -165,24 +165,50 @@ class Program
 
 
         // Problem 7
-        List<Patient> patients = new List<Patient>();
+        //List<Patient> patients = new List<Patient>();
 
-        Patient p1 = new InPatient(1, "Ramesh", 45, 5);
-        Patient p2 = new OutPatient(2, "Sita", 30);
+        //Patient p1 = new InPatient(1, "Ramesh", 45, 5);
+        //Patient p2 = new OutPatient(2, "Sita", 30);
 
-        patients.Add(p1);
-        patients.Add(p2);
+        //patients.Add(p1);
+        //patients.Add(p2);
+
+        //// Polymorphism in action
+        //foreach (Patient p in patients)
+        //{
+        //    p.GetPatientDetails();
+        //    Console.WriteLine("Bill Amount : " + p.CalculateBill());
+
+        //    if (p is IMedicalRecord record)
+        //    {
+        //        record.AddRecord("General Checkup");
+        //        record.ViewRecords();
+        //    }
+
+        //    Console.WriteLine();
+        //}
+
+
+        // Problem 8
+        List<Vehicles> vehicles = new List<Vehicles>();
+
+        vehicles.Add(new Cars(1, "Raj", 15));
+        vehicles.Add(new Bikes(2, "Amit", 10));
+        vehicles.Add(new Auto(3, "Suresh", 12));
+
+        double distance = 10; // km
 
         // Polymorphism in action
-        foreach (Patient p in patients)
+        foreach (Vehicles v in vehicles)
         {
-            p.GetPatientDetails();
-            Console.WriteLine("Bill Amount : " + p.CalculateBill());
+            v.GetVehicleDetails();
+            Console.WriteLine("Distance  : " + distance + " km");
+            Console.WriteLine("Fare      : " + v.CalculateFare(distance));
 
-            if (p is IMedicalRecord record)
+            if (v is IGPS gps)
             {
-                record.AddRecord("General Checkup");
-                record.ViewRecords();
+                gps.UpdateLocation("City Center");
+                Console.WriteLine("Location  : " + gps.GetCurrentLocation());
             }
 
             Console.WriteLine();
