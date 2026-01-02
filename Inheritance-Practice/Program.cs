@@ -7,6 +7,7 @@ class Program
     static void Main(string[] args)
     {
         // Single Inheritance
+        // Problem 1
         //Animal animal = new Animal();
         //animal.MakeSound();
         //Dog dog = new Dog();
@@ -16,18 +17,33 @@ class Program
         //Bird bird = new Bird();
         //bird.MakeSound();
 
+        // Problem 2
+        //Employee manager = new Manager("Alice", 101, 80000, 10);
+        //manager.DisplayDetails();
+        //Console.WriteLine();
 
-        Employee manager = new Manager("Alice", 101, 80000, 10);
-        manager.DisplayDetails();
-        Console.WriteLine();
+        //Employee developer = new Developer("Bob", 102, 60000, "C#");
+        //developer.DisplayDetails();
+        //Console.WriteLine();
 
-        Employee developer = new Developer("Bob", 102, 60000, "C#");
-        developer.DisplayDetails();
-        Console.WriteLine();
+        //Employee intern = new Intern("Charlie", 103, 15000, "6 Months");
+        //developer.DisplayDetails();
+        //Console.WriteLine();
 
-        Employee intern = new Intern("Charlie", 103, 15000, "6 Months");
-        developer.DisplayDetails();
-        Console.WriteLine();
+
+        // Problem 3
+        Vehicle[] vehicles =
+        {
+            new Car(180, "Petrol", 5),
+            new Truck(120, "Diesel", 5000),
+            new Motorcycle(150, "Petrol", false)
+        };
+
+        foreach (Vehicle vehicle in vehicles)
+        {
+            vehicle.DisplayInfo();
+            Console.WriteLine();
+        }
 
         Console.ReadKey();
     }
