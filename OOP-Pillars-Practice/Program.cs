@@ -135,34 +135,58 @@ class Program
 
 
         // Problem 6
-        List<FoodItem> foodItems = new List<FoodItem>();
+        //List<FoodItem> foodItems = new List<FoodItem>();
 
-        foodItems.Add(new VegItem("Paneer Burger", 120, 2));
-        foodItems.Add(new NonVegItem("Chicken Pizza", 300, 1));
+        //foodItems.Add(new VegItem("Paneer Burger", 120, 2));
+        //foodItems.Add(new NonVegItem("Chicken Pizza", 300, 1));
 
-        // Polymorphism demonstration
-        foreach (FoodItem item in foodItems)
+        //// Polymorphism demonstration
+        //foreach (FoodItem item in foodItems)
+        //{
+        //    item.GetItemDetails();
+
+        //    double totalPrice = item.CalculateTotalPrice();
+        //    double discount = 0;
+
+        //    if (item is IDiscountable discountItem)
+        //    {
+        //        discount = discountItem.ApplyDiscount();
+        //        Console.WriteLine("Discount   : " + discount);
+        //        Console.WriteLine("Offer      : " +
+        //                          discountItem.GetDiscountDetails());
+        //    }
+
+        //    double finalAmount = totalPrice - discount;
+
+        //    Console.WriteLine("Total Price: " + totalPrice);
+        //    Console.WriteLine("Final Bill : " + finalAmount);
+        //    Console.WriteLine();
+        //}
+
+
+        // Problem 7
+        List<Patient> patients = new List<Patient>();
+
+        Patient p1 = new InPatient(1, "Ramesh", 45, 5);
+        Patient p2 = new OutPatient(2, "Sita", 30);
+
+        patients.Add(p1);
+        patients.Add(p2);
+
+        // Polymorphism in action
+        foreach (Patient p in patients)
         {
-            item.GetItemDetails();
+            p.GetPatientDetails();
+            Console.WriteLine("Bill Amount : " + p.CalculateBill());
 
-            double totalPrice = item.CalculateTotalPrice();
-            double discount = 0;
-
-            if (item is IDiscountable discountItem)
+            if (p is IMedicalRecord record)
             {
-                discount = discountItem.ApplyDiscount();
-                Console.WriteLine("Discount   : " + discount);
-                Console.WriteLine("Offer      : " +
-                                  discountItem.GetDiscountDetails());
+                record.AddRecord("General Checkup");
+                record.ViewRecords();
             }
 
-            double finalAmount = totalPrice - discount;
-
-            Console.WriteLine("Total Price: " + totalPrice);
-            Console.WriteLine("Final Bill : " + finalAmount);
             Console.WriteLine();
         }
-
 
         Console.ReadKey();
         
